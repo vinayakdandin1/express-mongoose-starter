@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 var hbs = require('hbs');
+const logger = require('morgan');
 const PORT = process.env.PORT
 
 //ensure database is connected
@@ -22,6 +23,10 @@ app.set('views', __dirname + '/views');
 // Set up the middleware to make the files inside the public folder
 // available throughout the app
 app.use(express.static(__dirname + '/public'))
+
+
+//Allows us to see detailed logs in the console
+app.use(logger('dev'));
 
 //Register partials if needed
 //hbs.registerPartials(__dirname + '/views/partials');
