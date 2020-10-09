@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 // We connect to our local database here called `todos`
 let configOptions = {
     useNewUrlParser: true,
-    useUnifiedTopology: true 
+    useUnifiedTopology: true,
+    useFindAndModify: false, 
 }
 mongoose.connect('mongodb://localhost/todos', configOptions)
     .then((self) => {
