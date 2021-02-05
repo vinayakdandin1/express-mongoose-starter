@@ -3,3 +3,5 @@ node_modules
 # we do not commit our .env file in real
 # commenting out for learning purposes
 #.env
+
+package-lock.json
