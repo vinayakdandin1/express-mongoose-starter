@@ -1,0 +1,13 @@
+
+
+<div>
+    <h3> {{todo.name}} </h3>
+    <p> {{todo.description}} </p>
+
+    <a href="/todos/{{ todo._id }}/edit">
+        <button>Edit</button>
+    </a>
+    <a href="/todos/{{ todo._id }}/delete">
+        <button>Delete</button>
+    </a>
+</div>
